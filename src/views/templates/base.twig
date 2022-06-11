@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+
+		<!-- START:META-TAGS -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- END:META-TAGS -->
+		
+		<!-- START:TITLE -->
+		{% block title %}
+			{# Title Page #}
+			<title>{{ title() }}</title>
+		{% endblock %}
+		<!-- END:TITLE -->
+		
+		<!-- START:FAVICON -->
+		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+		<!-- END:FAVICON -->
+
+		<!-- START:STYLE-ICONS -->
+		<link rel="stylesheet" href="{{ asset('fonts/icons/ci-icons.css') }}">
+		<!-- END:STYLE-ICONS -->
+		
+		<!-- START:STYLES -->
+
+		<link rel="stylesheet" href="{{ css('main.css') }}">
+		
+		{% block styles %}
+			{# Custom styles by page #}
+		{% endblock %}
+
+		<!-- END:STYLES -->
+
+		<!-- START:SCRIPTS-HEAD -->
+
+		{% block scripts_head %}
+			{# Custom scripts by page #}
+		{% endblock %}
+		
+		<!-- END:SCRIPTS-HEAD -->
+
+	</head>
+
+	<body>
+		
+		<!-- START:CONTENT-LAYOUT-BASE -->
+		<main>
+			{% block content %}
+				{# Content Page #}
+			{% endblock %}
+		</main>
+		<!-- END:CONTENT-LAYOUT-BASE -->
+
+		<!-- START:MODALS -->
+		{% block modals %}
+			{# Set modals #}
+		{% endblock %}
+		<!-- END:MODALS -->
+		
+		<!-- START:SCRIPTS-BODY -->
+
+		{% block scripts_body_before %}
+			{# Custom before scripts by page #}
+		{% endblock %}
+
+		<script src="{{ js('main.js') }}"></script>
+		
+		{% block scripts_body %}
+			{# Custom scripts by page #}
+		{% endblock %}
+
+		<!-- END:SCRIPTS-BODY -->
+		
+	</body>
+
+</html>

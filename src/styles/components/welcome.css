@@ -1,0 +1,7 @@
+.welcome {
+	@apply bg-primary h-screen flex items-center justify-center;
+}
+
+.welcome h1 {
+	@apply w-full text-center text-3xl text-white tracking-widest;
+}
